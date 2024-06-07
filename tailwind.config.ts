@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         "primary": "#0C8346",
-        "dark": "#545454",
+        "dark": "#0D5D56",
+        "shamrock": "329f5b",
+        "celadon": "#8FD5A6"
       },
     },
   },
