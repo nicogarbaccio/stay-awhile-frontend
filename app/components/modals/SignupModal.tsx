@@ -1,12 +1,12 @@
 "use client";
 
 import Modal from "./Modal";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import useSignupModal from "@/app/hooks/useSignupModal";
 import { useState } from "react";
 import CustomButton from "../forms/CustomButton";
 
-const LoginModal = () => {
-  const loginModal = useLoginModal();
+const SignupModal = () => {
+  const signupModal = useSignupModal();
 
   const content = (
     <>
@@ -21,6 +21,11 @@ const LoginModal = () => {
           placeholder="Password"
           className="w-full h-[54px] px-4 border border-gray-300 rounded-xl"
         />
+        <input
+          type="password"
+          placeholder="Confirm password"
+          className="w-full h-[54px] px-4 border border-gray-300 rounded-xl"
+        />
         <div className="p-5 bg-red-700 text-white rounded-xl opacity-80">
           Error message
         </div>
@@ -30,12 +35,12 @@ const LoginModal = () => {
   );
   return (
     <Modal
-      isOpen={loginModal.isOpen}
-      close={loginModal.close}
-      label="Log in"
+      isOpen={signupModal.isOpen}
+      close={signupModal.close}
+      label="Sign up"
       content={content}
     />
   );
 };
 
-export default LoginModal;
+export default SignupModal;
